@@ -119,15 +119,21 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 
 ## ♻️3. RESTART FOR THE NEXT TIME
 
- 1️⃣.
-    
+ 1️⃣. **IN WSL TERIMINAL(1)**
+
+ ```
+ssh -i ~/.ssh/id_ed25519 username@<your_external_ip>
+```
+
+ 2️⃣. **IN WSL TERMINAL(1)** 
+ 
 ```
 cd codeassist
 source .venv/bin/activate
 uv run --active python run.py
 ```
 
- 2️⃣.
+ 3️⃣. **IN WSL TERMINAL(2)**
 
 ```
 ssh -i ~/.ssh/id_ed25519 -f -N \
