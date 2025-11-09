@@ -4,6 +4,7 @@ A complete guide to install and run CodeAssist on your machine (with a VPS).
 ---
 
 ## ⚙️ 1. Requirements
+
 - Ubuntu or WSL
 - Python 3.10+
 - SSH access to VPS
@@ -13,7 +14,8 @@ A complete guide to install and run CodeAssist on your machine (with a VPS).
 ---
 
 ## 🚀 2. Installation Steps
-###### >NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL
+
+ **>NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL**
 ### Step 1️⃣: SSH KEY FROM WSL
 
 ```
@@ -26,10 +28,11 @@ After using this command in your WSL press enter 3 times(ignore the passphrase l
 cat ~/.ssh/id_ed25519.pub
 ```
 
----
-
 Now save your ssh key in the notepad & now create your vps with your WSL ssh key.
-###### >NOTE - If you are using Google cloud then set your name { codeassist }. This note is not for other VPS providers.
+
+**>NOTE - If you are using Google cloud then set your name { codeassist }. This note is not for other VPS providers.**
+
+---
 
 ### Step 2️⃣: TURNING WSL INTO VPS
 
@@ -83,7 +86,7 @@ source .venv/bin/activate
 uv run --active python run.py
 ```
 
-#### >NOTE - After using run command, then you will need to paste your Hugging face token.
+- **>NOTE - After using run command, then you will need to paste your Hugging face token.**
 - For hugging face token head over to [HUGGING FACE](https://huggingface.co/docs/hub/en/security-tokens) and generate a token with ```Write``` access.
 
   ---
@@ -102,21 +105,21 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
   username@<your_external_ip>
 ```
 
-- #### Replace username & ip address, now open your default browser head over to http://localhost:3000/
-- #### You can login now to your CODEASSIST without any error
-- #### LFG ! SOLVE THE PROBLEMS ASAP
+- **Replace username & ip address, now open your default browser head over to http://localhost:3000/**
+- **You can login now to your CODEASSIST without any error**
+- **LFG ! SOLVE THE PROBLEMS ASAP**
 
 ---
 
   ### Step 7️⃣: COMPLETE YOUR TRAINING
 
-  - #### when you get tired of coding go to the terminal(1) of WSL & use ```CTRL``` ```C``` for uploading you training data.
+  - **when you get tired of coding go to the terminal(1) of WSL & use ```CTRL``` ```C``` for uploading you training data.**
  
     ---
 
 ## ♻️3. RESTART FOR THE NEXT TIME
 
-#### 1️⃣.
+ 1️⃣.
     
 ```
 cd codeassist
@@ -124,7 +127,7 @@ source .venv/bin/activate
 uv run --active python run.py
 ```
 
-#### 2️⃣.
+ 2️⃣.
 
 ```
 ssh -i ~/.ssh/id_ed25519 -f -N \
@@ -135,11 +138,13 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
   username@<your_external_ip>
 ```
 
-- #### RUN the above command just like previously you did in [6️⃣](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#step-6%EF%B8%8F%E2%83%A3) & you good to go.
+-  **RUN the above command just like previously you did in Step 6️⃣ & you good to go.**
 
 ---
 
-##### If you have any issue then open a issue on this repo or Dm me on my telegram [SONU](t.me/Sonu9900)
+**If you have any issue then open a issue on this repo or Dm me on my telegram [SONU](t.me/Sonu9900)**
 
-#####                                    MADE WITH 💖 BY SONU
-#####                                        THANK YOU 🙏
+**MADE WITH 💖 BY SONU** 
+
+**THANKYOU 🙏**
+              
