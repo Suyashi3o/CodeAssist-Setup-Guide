@@ -148,7 +148,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 
 ---
 
-**If you have any issue then open a issue on this repo or Dm me on my telegram [@SONU](t.me/Sonu9900)**
+**If you have any issue then open a issue on this repo or Dm me on my telegram [SONU](https://t.me/Sonu9900)**
 
 **MADE WITH 💖 BY SONU** 
 
