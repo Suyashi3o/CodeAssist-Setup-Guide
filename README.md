@@ -1,8 +1,18 @@
-# CodeAssist Setup Guide For VPS
-A complete guide to install and run CodeAssist on your machine (with a VPS).
+# CodeAssist – Setup Guide for VPS
+
+This guide provides step-by-step instructions to set up [CodeAssist](https://github.com/gensyn-ai/codeassist) on a VPS environment (Ubuntu, WSL, or similar).
+
+> Note: This is an unofficial community guide; for the official repository and advanced usage refer to the [CodeAssist project on GitHub](https://github.com/gensyn-ai/codeassist).
 
 ---
 
+## Table of Contents
+- [1. Requirements](##1-requirements)  
+- [2. Installation](##2-installation)    
+- [3. Restarting the Service](##3-restarting-the-service)
+
+  ---
+  
 ## ⚙️ 1. Requirements
 
 - Ubuntu or WSL
@@ -15,7 +25,7 @@ A complete guide to install and run CodeAssist on your machine (with a VPS).
 
 ## 🚀 2. Installation Steps
 
- **>NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL**
+ **> NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL**
 ### Step 1️⃣: SSH KEY FROM WSL
 
 ```
@@ -32,7 +42,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Now save your ssh key in the notepad & now create your vps with your WSL ssh key.
 
-**>NOTE - If you are using Google cloud then set your name { codeassist }.**
+**> NOTE - If you are using Google cloud then set your name { codeassist }.**
 
 ---
 
@@ -88,7 +98,7 @@ source .venv/bin/activate
 uv run --active python run.py
 ```
 
-- **>NOTE - After using run command, then you will need to paste your Hugging face token.**
+- **> NOTE - After using run command, then you will need to paste your Hugging face token.**
 - For hugging face token head over to [HUGGING FACE](https://huggingface.co/docs/hub/en/security-tokens) and generate a token with ```Write``` access.
 
   ---
@@ -116,18 +126,19 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
   ### Step 7️⃣: COMPLETE YOUR TRAINING
 
   - **when you get tired of coding go to the terminal(1) of WSL & use ```CTRL``` ```C``` for uploading you training data.**
- 
+
+ [Screenshot of training complete](training.jpg)
     ---
 
-## ♻️3. RESTART FOR THE NEXT TIME
+## ♻️3. Restarting the service
 
- 1️⃣. **IN WSL TERIMINAL(1)**
+ 1️⃣. **IN WSL TERIMINAL #1**
 
  ```
 ssh -i ~/.ssh/id_ed25519 username@<your_external_ip>
 ```
 
- 2️⃣. **IN WSL TERMINAL(1)** 
+ 2️⃣. **IN WSL TERMINAL #1** 
  
 ```
 cd codeassist
@@ -135,7 +146,7 @@ source .venv/bin/activate
 uv run --active python run.py
 ```
 
- 3️⃣. **IN WSL TERMINAL(2)**
+ 3️⃣. **IN WSL TERMINAL #2**
 
 ```
 ssh -i ~/.ssh/id_ed25519 -f -N \
