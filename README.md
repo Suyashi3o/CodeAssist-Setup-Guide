@@ -127,7 +127,8 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 
   - **when you get tired of coding go to the terminal(1) of WSL & use ```CTRL``` ```C``` for uploading you training data.**
 
- <img src="training.jpg" alt="Logs"> 
+ <img src="training.jpg" alt="Logs">
+ 
 ---
 
 # ♻️3. Restarting the service
