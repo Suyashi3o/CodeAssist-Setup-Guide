@@ -25,7 +25,7 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 
 ## 🚀 2. Installation Steps
 
- **> NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL**
+> **NOTE - I am Using Google cloud service for running CodeAssist & starting a SSH connection through my WSL**
 ### Step 1️⃣: SSH KEY FROM WSL
 
 ```
@@ -42,7 +42,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Now save your ssh key in the notepad & now create your vps with your WSL ssh key.
 
-**> NOTE - If you are using Google cloud then set your name { codeassist }.**
+> **NOTE - If you are using Google cloud then set your name { codeassist }.**
 
 ---
 
@@ -128,6 +128,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
   - **when you get tired of coding go to the terminal(1) of WSL & use ```CTRL``` ```C``` for uploading you training data.**
 
  [Screenshot of training complete](training.jpg)
+ 
     ---
 
 ## ♻️3. Restarting the service
