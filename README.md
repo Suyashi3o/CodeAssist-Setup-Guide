@@ -20,7 +20,7 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 - Ubuntu or WSL
 - Python 3.10+
 - SSH access to VPS
-- 12GB RAM (32GB recommended)
+- 12GB RAM
 - 50GB storage
 
 ---
@@ -34,9 +34,9 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 ssh-keygen -t ed25519 -C "codeassist"
 ```
 
-**If you’re using other VPS providers, use {root} instead of "codeassist".**
+**If you’re using other VPS providers, use `root` instead of "codeassist".**
 
-After running the above command in WSL, press Enter three times (ignore the passphrase line). Then use the command below to retrieve your SSH key: 
+- After running the above command in WSL, press Enter three times (ignore the passphrase line). Then use the command below to retrieve your SSH key: 
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
@@ -44,7 +44,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Save your SSH key in a notepad and create your VPS using this WSL SSH key.
 
-> **NOTE - If you’re using Google Cloud, set your username to {codeassist}.**
+> **NOTE - If you’re using Google Cloud, set your username to `codeassist`.**
 
 ---
 
@@ -54,7 +54,7 @@ Save your SSH key in a notepad and create your VPS using this WSL SSH key.
 ssh -i ~/.ssh/id_ed25519 username@<your_external_ip>
 ```
 
-As mentioned earlier, use {codeassist} for GCP or {root} for other VPS providers. After executing the command, enter your VPS password if you are on on another vps.
+- As mentioned earlier, use `codeassist` for GCP or `root` for other VPS providers. After executing the command, enter your VPS password if you are on on another vps.
 Your WSL is now connected to your VPS.
 
 ---
@@ -123,8 +123,10 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 - **Replace username and ip with your VPS details.**
 - **Now open your browser and go to http://localhost:3000/**
 - **You can now log in to CodeAssist without any errors.**
+
+  <img src="loginpage.jpg" alt="Logs">
   
-LFG! Solve your problems ASAP ⚡
+- **LFG! Solve your problems ASAP ⚡**
 ️
 ---
 
