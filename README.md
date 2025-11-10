@@ -22,6 +22,8 @@ A complete guide to install and run CodeAssist on your machine (with a VPS).
 ssh-keygen -t ed25519 -C "codeassist"
 ```
 
+**If you are using other VPS providers then use { root } at "codeassist".**
+
 After using this command in your WSL press enter 3 times(ignore the passphrase line) now use below command to get the ssh key 
 
 ```
@@ -30,7 +32,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Now save your ssh key in the notepad & now create your vps with your WSL ssh key.
 
-**>NOTE - If you are using Google cloud then set your name { codeassist }. This note is not for other VPS providers.**
+**>NOTE - If you are using Google cloud then set your name { codeassist }.**
 
 ---
 
