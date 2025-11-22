@@ -9,9 +9,9 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 ---
 
 ## 📋 Table of Contents
-- [1. Requirements](#1-requirements)  
-- [2. Installation](#2-installation)    
-- [3. Restarting the Service](#3-restarting-the-service)
+- [1. Requirements](#requirements)  
+- [2. Installation](#installation)    
+- [3. Restarting the Service](#restarting-the-service)
 
   ---
   
@@ -45,6 +45,13 @@ cat ~/.ssh/id_ed25519.pub
 Save your SSH key in a notepad and create your VPS using this WSL SSH key.
 
 > **NOTE - If you’re using Google Cloud, set your username to `codeassist`.**
+> If you already possess a VPS and are encountering difficulties adding your WSL's SSH public key, please utilize the following command.
+
+```bash
+nano ~/.ssh/authorized_keys
+```
+
+- Once you've run that command, just paste your SSH key. Then hit Ctrl + O, press Enter, and finally, Ctrl + X.
 
 ---
 
@@ -65,8 +72,6 @@ Your WSL is now connected to your VPS.
 sudo apt update && sudo apt install docker.io git -y
 sudo systemctl enable docker
 sudo systemctl start docker
-sudo usermod -aG docker $USER
-newgrp docker
 ```
 
 ```bash
@@ -87,21 +92,25 @@ source ~/.bashrc
 ```
 
 ```bash
-uv venv
-uv sync
+sudo usermod -aG docker $USER
+newgrp docker
 ```
 
 ---
 
 ### Step 5️⃣: Run the CodeAssist
 
+```
+screen -S codeassist
+```
+
 ```bash
 cd codeassist
 source .venv/bin/activate
-uv run --active python run.py
+uv run run.py
 ```
 
-- **> NOTE - After running this command, you’ll need to paste your Hugging Face token.
+- **NOTE - After running this command, you’ll need to paste your Hugging Face token.
 Generate one with `Write` access at [HUGGING FACE](https://huggingface.co/docs/hub/en/security-tokens)**
 
   ---
@@ -149,11 +158,15 @@ ssh -i ~/.ssh/id_ed25519 username@<your_external_ip>
 ```
 
  2️⃣. **IN WSL TERMINAL #1** 
+
+ ```
+screen -r codeassist
+```
  
 ```bash
 cd codeassist
 source .venv/bin/activate
-uv run --active python run.py
+uv run run.py
 ```
 
  3️⃣. **IN WSL TERMINAL #2**
@@ -171,9 +184,72 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 
 ---
 
+# 🧑‍💻4. RL-Swarm + CodeAssist on One VPS
+
+1️⃣. **Update ports in CodeAssist**
+
+```bash
+  sed -i '0,/11434/s//11435/' compose.yml
+sed -i -e 's/"11434\/tcp": 11434/"11434\/tcp": 11435/' -e 's#http://localhost:11434#http://localhost:11435#' run.py
+```
+
+2️⃣. **Update port in Web-UI Simulator**
+
+```bash
+cd web-ui/src/simulation/simulators
+sed -i 's#http://localhost:11434#http://localhost:11435#' OllamaCodeSimulator.ts
+```
+
+3️⃣. **Run CodeAssist on new port**
+
+```bash
+cd ~/codeassist
+uv run run.py --port 3001
+```
+
+4️⃣. **SSH tunnel for port 3001**
+
+- **Use this command in wsl terminal.**
+
+```bash
+ssh -i ~/.ssh/id_ed25519 -f -N \
+  -L 3001:localhost:3001 \
+  -L 8000:localhost:8000 \
+  -L 8001:localhost:8001 \
+  -L 8008:localhost:8008 \
+  username@<your_external_ip>
+```
+
+> NOTE - Since we're using port 3001 for CodeAssist, you'll need to go to this URL: http://localhost:3001 in your browser.Now enjoy login & solve problems ASAP !
+
+5️⃣. **Want to restart again**
+
+- **It'll all be just like before**
+- **also remember this restart only for [POINT 4](#RL-Swarm-+-CodeAssist-on-One-VPS)**
+
+**1. IN VPS SCREEN**
+ 
+```bash
+cd codeassist
+uv run run.py --port 3001
+```
+
+**2. IN WSL TERMINAL**
+ 
+```bash
+ssh -i ~/.ssh/id_ed25519 -f -N \
+  -L 3001:localhost:3001 \
+  -L 8000:localhost:8000 \
+  -L 8001:localhost:8001 \
+  -L 8008:localhost:8008 \
+  username@<your_external_ip>
+```
+
+---
+
 > 💬 Support
 
-**If you face any issues, open an Issue on this repo or message me on Telegram → [SONU](https://t.me/Sonu9900)**
+**If you face any issues, open an Issue on this repo or message me on [Discord post](https://discord.com/channels/852932483691577395/1437503907700936765) or Telegram → [SONU](https://t.me/Sonu9900)**
 
 **Made with 💖 by SONU** 
 
