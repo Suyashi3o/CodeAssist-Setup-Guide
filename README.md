@@ -9,10 +9,10 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 ---
 
 ## 📋 Table of Contents
-- 1. [Requirements](#1-requirements)  
-- 2. [Installation](#2-installation)    
-- 3. [Restarting the Service](#3-restarting-the-service)
-- 4. [RL-Swarm & CodeAssist](#4-RL-Swarm-+-CodeAssist-on-One-VPS)
+- 1. [Requirements](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%EF%B8%8F-1-requirements)  
+- 2. [Installation](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#-2-installation-steps)    
+- 3. [Restarting the Service](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%EF%B8%8F3-restarting-the-service)
+- 4. [RL-Swarm & CodeAssist](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)
 
   ---
   
@@ -226,7 +226,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 5️⃣. **Want to restart again**
 
 - **It'll all be just like before**
-- **also remember this restart only for [POINT 4](#4-RL-Swarm-+-CodeAssist-on-One-VPS)**
+- **also remember this restart only for [POINT 4](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)**
 
 **1. IN VPS SCREEN**
  
