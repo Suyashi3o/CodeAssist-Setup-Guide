@@ -9,10 +9,10 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 ---
 
 ## 📋 Table of Contents
-- 1. [Requirements](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%EF%B8%8F-1-requirements)  
-- 2. [Installation](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#-2-installation-steps)    
-- 3. [Restarting the Service](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%EF%B8%8F3-restarting-the-service)
-- 4. [RL-Swarm & CodeAssist](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)
+- 1. [Requirements](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#%EF%B8%8F-1-requirements)  
+- 2. [Installation](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#-2-installation-steps)   
+- 3. [Restarting the Service](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#%EF%B8%8F3-restarting-the-service)
+- 4. [RL-Swarm & CodeAssist](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)
 
   ---
   
@@ -181,7 +181,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
   username@<your_external_ip>
 ```
 
--  **Run the above command just like in Step 6️⃣, and you’re good to go.**
+-  **Run the above command just like in [Step 6️⃣](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#step-6%EF%B8%8F%E2%83%A3-create-ssh-tunnel), and you’re good to go.**
 
 ---
 
@@ -226,7 +226,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 5️⃣. **Want to restart again**
 
 - **It'll all be just like before**
-- **also remember this restart only for [POINT 4](https://github.com/Suyashi3o/CodeAssist-Setup-Guide/edit/main/README.md#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)**
+- **also remember this restart only for [POINT 4](https://github.com/Suyashi3o/CodeAssist-Setup-Guide?tab=readme-ov-file#%E2%80%8D4-rl-swarm--codeassist-on-one-vps)**
 
 **1. IN VPS SCREEN**
  
