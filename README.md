@@ -9,9 +9,10 @@ This guide provides step-by-step instructions to set up [CodeAssist](https://git
 ---
 
 ## 📋 Table of Contents
-- [1. Requirements](#requirements)  
-- [2. Installation](#installation)    
-- [3. Restarting the Service](#restarting-the-service)
+- 1. [Requirements](#1-requirements)  
+- 2. [Installation](#2-installation)    
+- 3. [Restarting the Service](#3-restarting-the-service)
+- 4. [RL-Swarm & CodeAssist](#4-RL-Swarm-+-CodeAssist-on-One-VPS)
 
   ---
   
@@ -225,7 +226,7 @@ ssh -i ~/.ssh/id_ed25519 -f -N \
 5️⃣. **Want to restart again**
 
 - **It'll all be just like before**
-- **also remember this restart only for [POINT 4](#RL-Swarm-+-CodeAssist-on-One-VPS)**
+- **also remember this restart only for [POINT 4](#4-RL-Swarm-+-CodeAssist-on-One-VPS)**
 
 **1. IN VPS SCREEN**
  
